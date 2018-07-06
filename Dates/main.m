@@ -16,6 +16,8 @@ int main(int argc, const char * argv[]) {
         int birthDayAge = convertedAge+1; //perform numerical functions
         NSNumber *convertedBirthDayAge = [NSNumber numberWithInt:birthDayAge];//convert back to object
         NSLog(@"After my birthday, I am %@", convertedBirthDayAge);
+        NSDate *now = [NSDate date];
+        NSLog(@"The date is %@", now);
     }
     return 0;
 }
