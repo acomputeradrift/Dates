@@ -10,8 +10,8 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        NSNumber *age = [NSNumber numberWithInt:40];
+        NSLog(@"I am %@", age);
     }
     return 0;
 }
