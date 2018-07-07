@@ -20,23 +20,15 @@ int main(int argc, const char * argv[]) {
         
         NSDate *now = [NSDate date];
         NSLog(@"The date is %@", now);
-        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-                [formatter setDateFormat:@"yyyy-MM-dd"];
-        NSString *dateString = [formatter stringFromDate:now];
+        //initialize NSDateFormatter object     NO OBJECT, just a pointer to memory location on stack
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];//this is initialization of object AND method call
+        //        object      method        argument
+                [formatter setDateFormat:@"yyyy-MM-dd"]; //this is only method call with pre initialized objects
+//initialize NSString object     NSDF object   method   argument
+        NSString *dateString = [formatter stringFromDate:now];//this is initialization of object AND method call
         NSLog(@"The formatted date is %@",dateString);
         
-        
-        
-//            NSDate *date= [NSDate date];// initialize and create date object
-//            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init]; // initilize and create dateFormatter object
-//            [dateFormatter setDateFormat:@"yyyy-MM-dd"]; // what is this doing?  sending a message to dateFormatter object to setDateFormat?
-//
-//            NSString *dateString = [dateFormatter stringFromDate:date]; //creating NSString object dateString and passing argument date to receiver dateString
-//            NSLog(@"Current date is %@",dateString); //print immutable dateString in chosen format as NSString
-//            NSDate *newDate = [dateFormatter dateFromString:dateString];// changing NSString back to NSDate object
-//            NSLog(@"NewDate: %@",newDate);
-        
-        
+
             return 0;
  
     }
